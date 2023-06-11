@@ -19,7 +19,12 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="bg-gray20 gap-16 py-20 md:h-full md:pb-0">
       {/* Image and main header */}
 
-      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
+      <motion.div
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        onViewportEnter={() => {
+          setSelectedPage(SelectedPage.Home);
+        }}
+      >
         {/* Main Header */}
         <div className="z-10 mt-32 md:basis-3/5">
           {/* Heading */}
@@ -74,7 +79,7 @@ const Home = ({ setSelectedPage }: Props) => {
         <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
-      </div>
+      </motion.div>
       {/* Sponsor */}
       {isAboveMediumScreen && isAboveMediumScreen && (
         <div className="w-fulll h-[150px] bg-primary-100 py-10">
