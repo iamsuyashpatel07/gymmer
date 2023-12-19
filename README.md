@@ -1,4 +1,4 @@
 # TECH STACK
 - Vite -Typescript
-- Tailwinf
+- Tailwind css
 - Framer
